@@ -87,3 +87,22 @@ tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    input[type="text"], input[type="email"] {
+        max-width: 100%;
+    }
+}
