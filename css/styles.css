@@ -87,15 +87,3 @@ tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-@media (max-width: 600px) {
-    .navbar {
-        flex-direction: column; 
-        text-align: center;
-    }
-    .container {
-        width: 95%; 
-    }
-    h1 {
-        font-size: 2rem; 
-    }
-}
