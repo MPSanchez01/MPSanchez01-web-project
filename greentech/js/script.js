@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. Product Filter Logic (for products.html)
     const filterButtons = document.querySelectorAll('.filter-btn');
     const products = document.querySelectorAll('.product-card');
 
@@ -19,15 +18,17 @@ document.addEventListener('DOMContentLoaded', () => {
     
     forms.forEach(form => {
         form.addEventListener('submit', (e) => {
+
             e.preventDefault(); 
             
             const emailInput = form.querySelector('input[type="email"]');
             
-            if (emailInput && !emailInput.value.includes('@')) {
+            if (emailInput && (!emailInput.value.includes('@') || !emailInput.value.includes('.'))) {
                 alert('Please enter a valid e-mail address.');
             } else {
-                alert('Thank you! GreenTech Solutions has received your request and will be in touch shortly.');
-                form.reset();
+                alert('Success! Thank you for subscribing to GreenTech Solutions. We will be in touch shortly!');
+                
+                form.reset(); 
             }
         });
     });
