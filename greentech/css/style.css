@@ -65,7 +65,6 @@ body {
 .container { padding: 60px 10%; }
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
 
-/* Product/Blog Cards */
 .card {
     background: var(--white);
     padding: 25px;
