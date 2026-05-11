@@ -1,24 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
-
+    
+    // 1. Product Filter Logic (for products.html)
     const filterButtons = document.querySelectorAll('.filter-btn');
     const products = document.querySelectorAll('.product-card');
 
-    filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const category = btn.dataset.category;
-            products.forEach(item => {
-                item.style.display = (category === 'all' || item.classList.contains(category)) ? 'block' : 'none';
+    if (filterButtons.length > 0) {
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const category = btn.dataset.category;
+                products.forEach(item => {
+                    item.style.display = (category === 'all' || item.classList.contains(category)) ? 'block' : 'none';
+                });
             });
         });
-    });
-
-
-    const form = document.querySelector('#contact-form');
-    if(form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Success! Our sustainability experts will contact you soon.');
-            form.reset();
-        });
     }
+
+    const forms = document.querySelectorAll('form');
+    
+    forms.forEach(form => {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); 
+            
+            const emailInput = form.querySelector('input[type="email"]');
+            
+            if (emailInput && !emailInput.value.includes('@')) {
+                alert('Please enter a valid e-mail address.');
+            } else {
+                alert('Thank you! GreenTech Solutions has received your request and will be in touch shortly.');
+                form.reset();
+            }
+        });
+    });
 });
