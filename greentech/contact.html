@@ -2,33 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact | GreenTech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | GreenTech Solutions</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">GreenTech Solutions</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav class="navbar">
+            <div class="logo">GreenTech Solutions</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main class="container">
-        <h1>Get In Touch</h1>
-        <form id="contact-form" style="max-width: 600px; margin-top: 30px;">
-            <label for="name">Name</label><br>
-            <input type="text" id="name" required style="width:100%; padding:10px; margin-bottom:20px;"><br>
+        <header style="text-align: center; margin-bottom: 30px; margin-top: 20px;">
+            <h1>Get In Touch</h1>
+            <p>Ready to modernize your business sustainability? Reach out today.</p>
+        </header>
+
+        <form id="contact-form" style="max-width: 600px; margin: 30px auto; background: #f9f9f9; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+            <div style="margin-bottom: 20px;">
+                <label for="name" style="font-weight: bold; display: block; margin-bottom: 5px;">Name</label>
+                <input type="text" id="name" required style="width:100%; padding:12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+            </div>
             
-            <label for="email">Business Email</label><br>
-            <input type="email" id="email" required style="width:100%; padding:10px; margin-bottom:20px;"><br>
+            <div style="margin-bottom: 20px;">
+                <label for="email" style="font-weight: bold; display: block; margin-bottom: 5px;">Business Email</label>
+                <input type="email" id="email" required style="width:100%; padding:12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <label for="message" style="font-weight: bold; display: block; margin-bottom: 5px;">How can we help?</label>
+                <textarea id="message" rows="4" style="width:100%; padding:12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;"></textarea>
+            </div>
             
-            <button type="submit" class="btn">Send Message</button>
+            <button type="submit" class="btn" style="width: 100%; cursor: pointer;">Send Message</button>
         </form>
     </main>
+
+    <footer style="background: #333; color: white; text-align: center; padding: 30px; margin-top: 50px;">
+        <p>&copy; 2026 GreenTech Solutions. All rights reserved.</p>
+    </footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>
