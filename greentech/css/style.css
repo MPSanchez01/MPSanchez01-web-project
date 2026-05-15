@@ -172,3 +172,43 @@ body {
     margin: 10px 0;
     font-size: 1.2rem;
 }
+
+@media (max-width: 768px) {
+
+    .container {
+        padding: 15px; 
+    }
+
+    h1 {
+        font-size: 1.8rem; 
+    }
+
+    .timeline-item, .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #contact-form {
+        width: 100% !important;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    input, textarea, .btn {
+        width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .nav-links li {
+        font-size: 0.9rem;
+    }
+}
